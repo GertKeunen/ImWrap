@@ -26,7 +26,14 @@ bool ImWrapAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) c
 }
 
 void ImWrapAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midi)
-{
+{    
+// --- DEBUG: print zodra het aantal kanalen verandert ---
+    static int lastReported = -1;
+    if (buffer.getNumChannels() != lastReported)
+    {
+        lastReported = buffer.getNumChannels();
+        fprintf (stderr, "ImWrap: audiobuffer heeft %d kanalen\n", lastReported);
+    }
     buffer.clear();
 
     for (const auto metadata : midi)
