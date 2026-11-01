@@ -21,8 +21,7 @@ void ImWrapAudioProcessor::prepareToPlay (double sampleRate, int /*samplesPerBlo
 bool ImWrapAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
     const auto& out = layouts.getMainOutputChannelSet();
-    return out == juce::AudioChannelSet::discreteChannels (maxChannels)
-        || out == juce::AudioChannelSet::stereo();
+    return out == juce::AudioChannelSet::discreteChannels (maxChannels);
 }
 
 void ImWrapAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midi)
