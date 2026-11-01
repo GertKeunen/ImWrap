@@ -1,0 +1,3 @@
+/Users/gertkeunen/Documents/ImWrap/build/vst3_helpers/ImWrap/CMakeFiles/vst3_helper.dir
+/Users/gertkeunen/Documents/ImWrap/build/vst3_helpers/ImWrap/CMakeFiles/edit_cache.dir
+/Users/gertkeunen/Documents/ImWrap/build/vst3_helpers/ImWrap/CMakeFiles/rebuild_cache.dir
